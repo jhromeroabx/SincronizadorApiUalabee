@@ -1,4 +1,4 @@
-const pathEnv = process.env.NODE_ENV == "production" ? '/.env.production' : '/.env.development';
+const pathEnv = process.env.NODE_ENV == "production" ? '../.env.production' : '../.env.development';
 require("dotenv").config({path: __dirname + pathEnv });
 
 const generateSqlConfig = (DB) => {

@@ -1,4 +1,4 @@
-const SincronizadorStore = require("./modelo_sincronizador"); //elo_sincronizador");
+const SincronizadorStore = require("./modelo_sincronizador");
 
 class SincronizadorController {
     #store;
@@ -12,6 +12,9 @@ class SincronizadorController {
         const response = await this.#store
             .obtenerInformacion()
             .catch((error) => error);
+
+        console.log("testttt");
+
         return response;
     }
 }

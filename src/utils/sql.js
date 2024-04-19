@@ -2,7 +2,7 @@ const generateSqlConfig = require("./sql_config");
 const sql = require("mssql");
 
 class SqlConnection {
-  constructor() {}
+  constructor() { }
 
   async #connect(codEmpresa) {
     try {
@@ -37,6 +37,45 @@ class SqlConnection {
       });
     });
   }
+
+  // databases = {
+  //   3: { nom: "TGPS2012", state: true },
+  //   5: { nom: "AGPS_TRANSLICSA", state: true },
+  //   6: { nom: "AGPS_Etul4", state: true },
+  //   8: { nom: "AGPS_StaCatalina", state: true },
+  //   11: { nom: "AGPS_SJL", state: true },
+  //   14: { nom: "AGPS_Rapido", state: true },
+  //   15: { nom: "AGPS_Chama", state: true },
+  //   16: { nom: "AGPS_Salamanca", state: true },
+  //   20: { nom: "AGPS_Lipetsa", state: true },
+  //   22: { nom: "AGPS_LimaSur", state: true },
+  //   25: { nom: "AGPS_Pruebas", state: true },
+  //   26: { nom: "AGPS_Alfa", state: true },
+  //   28: { nom: "AGPS_Modasa", state: true },
+  //   30: { nom: "AGPS_CaminoInca", state: true },
+  //   32: { nom: "AGPS_Etupsa", state: true },
+  //   34: { nom: "AGPS_AqpTS", state: true },
+  //   37: { nom: "AGPS_RAmerica", state: true },
+  //   38: { nom: "AGPS_TATSA", state: true },
+  //   39: { nom: "AGPS_Vigusa", state: true },
+  //   42: { nom: "AGPS_Vipusa", state: true },
+  //   43: { nom: "AGPS_Salvador", state: true },
+  //   44: { nom: "AGPS_SantoCristo", state: true },
+  //   45: { nom: "AGPS_SolOro", state: true },
+  //   46: { nom: "AGPS_UAT", state: true },
+  //   47: { nom: "AGPS_TransTigrillo", state: true },
+  //   48: { nom: "AGPS_SanJose", state: true },
+  //   49: { nom: "AGPS_JLLogistica", state: true },
+  //   51: { nom: "AGPS_GTI", state: true },
+  //   52: { nom: "AGPS_GTI_DES", state: true },
+  //   53: { nom: "AGPS_ChalacosUnidos", state: true },
+  //   54: { nom: "AGPS_ETVPSA", state: true },
+  //   55: { nom: "AGPS_VIPUSA_8109", state: true },
+  //   56: { nom: "AGPS_PeruBus", state: true },
+  //   57: { nom: "AGPS_ETS104", state: true },
+  //   58: { nom: "TeGuio", state: true },
+  // };
+
   #getNameDatabase(codEmpresa) {
     const databases = {
       3: "TGPS2012",
